@@ -36,13 +36,13 @@ When a weapon label is detected, it will:
 - save an alert image in `alerts/`
 
 ```bash
-python3 ip_webcam_viewer.py 192.168.1.23:8080 --detect-weapons
+python3 main.py 192.168.1.23:8080 --detect-weapons
 ```
 
 For your trained weapon model, run:
 
 ```bash
-python3 ip_webcam_viewer.py 192.168.150.47:8080 --detect-weapons
+python3 main.py 192.168.150.47:8080 --detect-weapons
 ```
 
 This opens a popup window named `Phone IP Webcam - Weapon Detection`. If the
