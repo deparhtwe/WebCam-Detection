@@ -1,0 +1,29 @@
+{
+  "categories": [
+    "weapon"
+  ],
+  "confidence": 95.67031860351562,
+  "created_at": "2026-07-13T14:28:22",
+  "detections": [
+    {
+      "box": [
+        568,
+        79,
+        1137,
+        574
+      ],
+      "category": "weapon",
+      "confidence": 0.9567031860351562,
+      "label": "SMG"
+    }
+  ],
+  "id": 1783929502266,
+  "image_file": "ip-webcam-20260713-142822.jpg",
+  "image_path": "image_data/ip-webcam-20260713-142822.jpg",
+  "labels": [
+    "SMG"
+  ],
+  "location": "Parking Lot B",
+  "notes": "\"SMG\"",
+  "status": "verified"
+}

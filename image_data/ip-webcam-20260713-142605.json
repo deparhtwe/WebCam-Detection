@@ -1,0 +1,29 @@
+{
+  "categories": [
+    "weapon"
+  ],
+  "confidence": 63.692426681518555,
+  "created_at": "2026-07-13T14:26:05",
+  "detections": [
+    {
+      "box": [
+        613,
+        247,
+        1274,
+        720
+      ],
+      "category": "weapon",
+      "confidence": 0.6369242668151855,
+      "label": "ShotGun"
+    }
+  ],
+  "id": 1783929365759,
+  "image_file": "ip-webcam-20260713-142605.jpg",
+  "image_path": "image_data/ip-webcam-20260713-142605.jpg",
+  "labels": [
+    "ShotGun"
+  ],
+  "location": "Parking Lot B",
+  "notes": "\"ShotGun\"",
+  "status": "pending"
+}

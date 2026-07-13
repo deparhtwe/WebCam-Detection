@@ -1,0 +1,29 @@
+{
+  "categories": [
+    "weapon"
+  ],
+  "confidence": 65.20791053771973,
+  "created_at": "2026-07-13T14:13:23",
+  "detections": [
+    {
+      "box": [
+        860,
+        2,
+        970,
+        56
+      ],
+      "category": "weapon",
+      "confidence": 0.6520791053771973,
+      "label": "HandGun"
+    }
+  ],
+  "id": 1783928603452,
+  "image_file": "ip-webcam-20260713-141323.jpg",
+  "image_path": "image_data/ip-webcam-20260713-141323.jpg",
+  "labels": [
+    "HandGun"
+  ],
+  "location": "Parking Lot B",
+  "notes": "\"HandGun\"",
+  "status": "pending"
+}

@@ -23,10 +23,10 @@ from urllib.parse import urlparse
 import tkinter as tk
 from tkinter import messagebox, simpledialog
 
-DEFAULT_WEAPON_MODEL_PATH = "runs/detect/train-1/weights/best.pt"
+DEFAULT_WEAPON_MODEL_PATH = "runs/detect/train-2/weights/best.pt"
 DEFAULT_FIGHT_MODEL_PATH = "runs/detect/train/weights/best.pt"
 
-DEFAULT_WEAPON_LABELS = {"weapon"}
+DEFAULT_WEAPON_LABELS = {"handgun","knife","smg","shotgun"}
 DEFAULT_FIGHT_LABELS = {"fight"}
 
 
@@ -188,7 +188,7 @@ def fallback_records() -> list[DetectionRecord]:
 
 
 def record_display_title(record: DetectionRecord) -> str:
-    return record.labels[0] if record.labels else "Unknown"
+    return display_label(record.labels[0]) if record.labels else "Unknown"
 
 
 def record_status_meta(status: str) -> tuple[str, str]:
@@ -202,6 +202,21 @@ def record_status_meta(status: str) -> tuple[str, str]:
 
 def parse_labels(labels: str) -> set[str]:
     return {label.strip().lower() for label in labels.split(",") if label.strip()}
+
+
+def display_label(label: str) -> str:
+    normalized = label.strip().lower()
+    aliases = {
+        "handgun": "HandGun",
+        "knife": "Knife",
+        "smg": "SMG",
+        "shotgun": "ShotGun",
+    }
+    return aliases.get(normalized, label.strip())
+
+
+def format_detection_labels(labels: list[str]) -> str:
+    return ",".join(f'"{display_label(label)}"' for label in labels)
 
 
 def load_detector(config: ModelConfig):
@@ -476,7 +491,7 @@ class DetectionHistoryRepository:
                 confidence=confidence,
                 image_path=str(image_path),
                 status=status,
-                notes=", ".join(labels),
+                notes=format_detection_labels(labels),
                 location=inferred_location,
             )
             metadata = self._metadata_for_record(record, image_path=str(image_path))
@@ -841,6 +856,7 @@ class DashboardApp:
         self.selected_record_id: int | None = None
         self.history_layout = "compact"
         self.history_resize_job: str | None = None
+        self.last_history_signature: tuple[str, int | None, tuple[int, ...]] | None = None
 
         self.capture_time_var = tk.StringVar(value="2026-07-09 14:09:14")
         self.operator_notes_var = tk.StringVar(value="Weapon")
@@ -1203,6 +1219,7 @@ class DashboardApp:
         if self.selected_record_id is None or all(record.id != self.selected_record_id for record in self.incidents):
             self.selected_record_id = self.incidents[0].id if self.incidents else None
 
+        self.last_history_signature = None
         self.refresh_history_view()
         self.update_footer_from_selected()
 
@@ -1216,12 +1233,19 @@ class DashboardApp:
         self.footer_notes.set(self.operator_notes_var.get())
 
     def select_record(self, record_id: int) -> None:
+        if record_id == self.selected_record_id:
+            return
         self.selected_record_id = record_id
         self.update_footer_from_selected()
-        self.refresh_history()
+        self.refresh_history_view()
         self.footer_var.set(f"Selected incident #{record_id}.")
 
     def refresh_history_view(self) -> None:
+        signature = (self.history_layout, self.selected_record_id, tuple(record.id for record in self.incidents))
+        if signature == self.last_history_signature:
+            return
+        self.last_history_signature = signature
+
         for child in self.history_rows_container.winfo_children():
             child.destroy()
 
@@ -1467,7 +1491,7 @@ class DashboardApp:
         self.confidence_value_label.configure(text=self.timeline_var.get())
 
         if detections:
-            labels = ", ".join(sorted({det.label for det in detections}))[:48]
+            labels = format_detection_labels(sorted({det.label for det in detections}))[:48]
             self.pipeline_desc_var.set(f"{len(detections)} active detection(s): {labels}")
             self.status_badge.configure(
                 text=f"SUSPICIOUS EVENT\n{self.pipeline_desc_var.get()}",
@@ -1512,7 +1536,7 @@ class DashboardApp:
             confidence=confidence,
             image_path=image_path,
             status=status,
-            notes=", ".join(labels),
+            notes=format_detection_labels(labels),
             location=inferred_location,
             image_data=Path(image_path).read_bytes() if image_path and Path(image_path).exists() else None,
         )
@@ -1520,7 +1544,8 @@ class DashboardApp:
     def append_record(self, record: DetectionRecord) -> None:
         self.incidents = [record] + [item for item in self.incidents if item.id != record.id]
         self.selected_record_id = record.id
-        self.refresh_history()
+        self.last_history_signature = None
+        self.refresh_history_view()
         self.update_footer_from_selected()
 
     def save_alert_frame(self, frame) -> Path:
@@ -1669,6 +1694,7 @@ class DashboardApp:
         records = self.history_repository.list_records()
         self.incidents = [self.normalize_record(item) for item in records]
         self.selected_record_id = self.incidents[0].id if self.incidents else None
+        self.last_history_signature = None
         self.refresh_history()
         self.update_footer_from_selected()
         self.footer_var.set(f"Deleted incident #{record.id}.")

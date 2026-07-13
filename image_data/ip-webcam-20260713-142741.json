@@ -1,0 +1,53 @@
+{
+  "categories": [
+    "weapon"
+  ],
+  "confidence": 85.66598892211914,
+  "created_at": "2026-07-13T14:27:41",
+  "detections": [
+    {
+      "box": [
+        0,
+        120,
+        305,
+        532
+      ],
+      "category": "weapon",
+      "confidence": 0.8566598892211914,
+      "label": "HandGun"
+    },
+    {
+      "box": [
+        0,
+        112,
+        297,
+        540
+      ],
+      "category": "weapon",
+      "confidence": 0.8130820989608765,
+      "label": "SMG"
+    },
+    {
+      "box": [
+        678,
+        118,
+        1142,
+        352
+      ],
+      "category": "weapon",
+      "confidence": 0.5563690066337585,
+      "label": "HandGun"
+    }
+  ],
+  "id": 1783929461378,
+  "image_file": "ip-webcam-20260713-142741.jpg",
+  "image_path": "image_data/ip-webcam-20260713-142741.jpg",
+  "labels": [
+    "HandGun",
+    "SMG",
+    "HandGun"
+  ],
+  "location": "Parking Lot B",
+  "notes": "\"HandGun\",\"SMG\",\"HandGun\"",
+  "status": "verified"
+}

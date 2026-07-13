@@ -1,0 +1,53 @@
+{
+  "categories": [
+    "weapon"
+  ],
+  "confidence": 94.77423429489136,
+  "created_at": "2026-07-13T13:42:35",
+  "detections": [
+    {
+      "box": [
+        626,
+        320,
+        1065,
+        509
+      ],
+      "category": "weapon",
+      "confidence": 0.9477423429489136,
+      "label": "Weapon"
+    },
+    {
+      "box": [
+        602,
+        532,
+        1080,
+        713
+      ],
+      "category": "weapon",
+      "confidence": 0.9464085698127747,
+      "label": "Weapon"
+    },
+    {
+      "box": [
+        664,
+        166,
+        1080,
+        314
+      ],
+      "category": "weapon",
+      "confidence": 0.8990229964256287,
+      "label": "Weapon"
+    }
+  ],
+  "id": 1783926755765,
+  "image_file": "ip-webcam-20260713-134235.jpg",
+  "image_path": "image_data/ip-webcam-20260713-134235.jpg",
+  "labels": [
+    "Weapon",
+    "Weapon",
+    "Weapon"
+  ],
+  "location": "Parking Lot B",
+  "notes": "Weapon, Weapon, Weapon",
+  "status": "verified"
+}
