@@ -37,3 +37,40 @@
 #to change the confidence level in line 956;(default=0.4)
 
 #to update the output result in line 493(detected_type="both")
+
+
+
+
+
+
+#------------------------------------------------------------------------------------
+#Connection With Database
+
+import psycopg
+
+# Define your connection details
+DB_PARAMS = {
+    "host": "localhost",
+    "dbname": "detection",
+    "user": "postgres",
+    "password": "postgres",
+    "port": 5432
+}
+
+try:
+   
+    with psycopg.connect(**DB_PARAMS) as conn:
+        print("Successfully connected to the database!")
+        
+       
+        with conn.cursor() as cur:
+            
+           
+            cur.execute("SELECT version();")
+            
+    
+            db_version = cur.fetchone()
+            print(f"PostgreSQL version: {db_version}")
+
+except Exception as e:
+    print(f"An error occurred: {e}")
