@@ -23,11 +23,11 @@ from urllib.parse import urlparse
 import tkinter as tk
 from tkinter import messagebox, simpledialog
 
-DEFAULT_WEAPON_MODEL_PATH = "runs/detect/train-1/weights/best.pt"
-DEFAULT_FIGHT_MODEL_PATH = "runs/detect/train/weights/best.pt"
+DEFAULT_WEAPON_MODEL_PATH = "runs/detect/train/weights/best.pt"
+DEFAULT_FIGHT_MODEL_PATH = "runs/detect/train-1/weights/best.pt"
 
 DEFAULT_WEAPON_LABELS = {"grenade","knife","missile","pistol","rifle"}
-DEFAULT_FIGHT_LABELS = {"fight"}
+DEFAULT_FIGHT_LABELS = {"fight","non-fight"}
 
 
 @dataclass

@@ -1,13 +1,13 @@
 names:
 - fight
-- nofight
+- non-fight
 nc: 2
 roboflow:
   license: CC BY 4.0
-  project: fight-k9buj-z9coy
-  url: https://universe.roboflow.com/weapon-b3vyl/fight-k9buj-z9coy/dataset/2
+  project: fight-detection-cdebd-det6d
+  url: https://app.roboflow.com/depars-workspace/fight-detection-cdebd-det6d/2
   version: 2
-  workspace: weapon-b3vyl
-test: /home/vix/Desktop/Projects/Detection-Project/fight/test/images
-train: /home/vix/Desktop/Projects/Detection-Project/fight/train/images
-val: /home/vix/Desktop/Projects/Detection-Project/fight/valid/images
+  workspace: depars-workspace
+test: /content/fight-detection-2/test/images
+train: /content/fight-detection-2/train/images
+val: /content/fight-detection-2/valid/images

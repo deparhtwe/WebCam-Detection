@@ -1,7 +1,7 @@
 task: detect
 mode: train
 model: yolov8n.pt
-data: /content/weapon-detection-1/data.yaml
+data: /content/fight-detection-2/data.yaml
 epochs: 20
 time: null
 patience: 100
