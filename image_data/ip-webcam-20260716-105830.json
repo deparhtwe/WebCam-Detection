@@ -1,0 +1,29 @@
+{
+  "categories": [
+    "weapon"
+  ],
+  "confidence": 63.18586468696594,
+  "created_at": "2026-07-16T10:58:30",
+  "detections": [
+    {
+      "box": [
+        341,
+        47,
+        834,
+        705
+      ],
+      "category": "weapon",
+      "confidence": 0.6318586468696594,
+      "label": "Rifle"
+    }
+  ],
+  "id": 1784176110814,
+  "image_file": "ip-webcam-20260716-105830.jpg",
+  "image_path": "image_data/ip-webcam-20260716-105830.jpg",
+  "labels": [
+    "Rifle"
+  ],
+  "location": "Parking Lot B",
+  "notes": "\"Rifle\"",
+  "status": "pending"
+}

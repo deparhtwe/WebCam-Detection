@@ -1,0 +1,29 @@
+{
+  "categories": [
+    "weapon"
+  ],
+  "confidence": 51.232677698135376,
+  "created_at": "2026-07-16T11:02:34",
+  "detections": [
+    {
+      "box": [
+        362,
+        326,
+        983,
+        489
+      ],
+      "category": "weapon",
+      "confidence": 0.5123267769813538,
+      "label": "Knife"
+    }
+  ],
+  "id": 1784176354296,
+  "image_file": "ip-webcam-20260716-110234.jpg",
+  "image_path": "image_data/ip-webcam-20260716-110234.jpg",
+  "labels": [
+    "Knife"
+  ],
+  "location": "Parking Lot B",
+  "notes": "\"Knife\"",
+  "status": "false_positive"
+}

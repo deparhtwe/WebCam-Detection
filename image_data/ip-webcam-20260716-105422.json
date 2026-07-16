@@ -1,0 +1,53 @@
+{
+  "categories": [
+    "weapon"
+  ],
+  "confidence": 77.29380130767822,
+  "created_at": "2026-07-16T10:54:22",
+  "detections": [
+    {
+      "box": [
+        552,
+        23,
+        770,
+        610
+      ],
+      "category": "weapon",
+      "confidence": 0.7729380130767822,
+      "label": "Rifle"
+    },
+    {
+      "box": [
+        739,
+        25,
+        887,
+        606
+      ],
+      "category": "weapon",
+      "confidence": 0.7317663431167603,
+      "label": "Rifle"
+    },
+    {
+      "box": [
+        353,
+        22,
+        560,
+        657
+      ],
+      "category": "weapon",
+      "confidence": 0.5814664363861084,
+      "label": "Rifle"
+    }
+  ],
+  "id": 1784175862759,
+  "image_file": "ip-webcam-20260716-105422.jpg",
+  "image_path": "image_data/ip-webcam-20260716-105422.jpg",
+  "labels": [
+    "Rifle",
+    "Rifle",
+    "Rifle"
+  ],
+  "location": "Parking Lot B",
+  "notes": "\"Rifle\",\"Rifle\",\"Rifle\"",
+  "status": "pending"
+}

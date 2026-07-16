@@ -1,0 +1,29 @@
+{
+  "categories": [
+    "weapon"
+  ],
+  "confidence": 59.56016778945923,
+  "created_at": "2026-07-16T10:59:36",
+  "detections": [
+    {
+      "box": [
+        539,
+        274,
+        666,
+        595
+      ],
+      "category": "weapon",
+      "confidence": 0.5956016778945923,
+      "label": "Grenade"
+    }
+  ],
+  "id": 1784176176813,
+  "image_file": "ip-webcam-20260716-105936.jpg",
+  "image_path": "image_data/ip-webcam-20260716-105936.jpg",
+  "labels": [
+    "Grenade"
+  ],
+  "location": "Parking Lot B",
+  "notes": "\"Grenade\"",
+  "status": "false_positive"
+}

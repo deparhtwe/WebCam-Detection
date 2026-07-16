@@ -1,0 +1,53 @@
+{
+  "categories": [
+    "weapon"
+  ],
+  "confidence": 60.64911484718323,
+  "created_at": "2026-07-16T11:01:09",
+  "detections": [
+    {
+      "box": [
+        487,
+        215,
+        687,
+        643
+      ],
+      "category": "weapon",
+      "confidence": 0.6064911484718323,
+      "label": "Pistol"
+    },
+    {
+      "box": [
+        704,
+        165,
+        902,
+        659
+      ],
+      "category": "weapon",
+      "confidence": 0.5645341277122498,
+      "label": "Rifle"
+    },
+    {
+      "box": [
+        703,
+        172,
+        909,
+        657
+      ],
+      "category": "weapon",
+      "confidence": 0.5342428088188171,
+      "label": "Pistol"
+    }
+  ],
+  "id": 1784176269816,
+  "image_file": "ip-webcam-20260716-110109.jpg",
+  "image_path": "image_data/ip-webcam-20260716-110109.jpg",
+  "labels": [
+    "Pistol",
+    "Rifle",
+    "Pistol"
+  ],
+  "location": "Parking Lot B",
+  "notes": "\"Pistol\",\"Rifle\",\"Pistol\"",
+  "status": "pending"
+}

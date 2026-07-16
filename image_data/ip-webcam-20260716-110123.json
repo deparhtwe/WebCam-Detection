@@ -1,0 +1,29 @@
+{
+  "categories": [
+    "weapon"
+  ],
+  "confidence": 91.77402853965759,
+  "created_at": "2026-07-16T11:01:23",
+  "detections": [
+    {
+      "box": [
+        455,
+        134,
+        1164,
+        699
+      ],
+      "category": "weapon",
+      "confidence": 0.9177402853965759,
+      "label": "Pistol"
+    }
+  ],
+  "id": 1784176283371,
+  "image_file": "ip-webcam-20260716-110123.jpg",
+  "image_path": "image_data/ip-webcam-20260716-110123.jpg",
+  "labels": [
+    "Pistol"
+  ],
+  "location": "Parking Lot B",
+  "notes": "\"Pistol\"",
+  "status": "verified"
+}

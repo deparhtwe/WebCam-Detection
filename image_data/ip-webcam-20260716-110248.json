@@ -1,0 +1,29 @@
+{
+  "categories": [
+    "weapon"
+  ],
+  "confidence": 58.06944966316223,
+  "created_at": "2026-07-16T11:02:48",
+  "detections": [
+    {
+      "box": [
+        478,
+        7,
+        607,
+        685
+      ],
+      "category": "weapon",
+      "confidence": 0.5806944966316223,
+      "label": "Missile"
+    }
+  ],
+  "id": 1784176368831,
+  "image_file": "ip-webcam-20260716-110248.jpg",
+  "image_path": "image_data/ip-webcam-20260716-110248.jpg",
+  "labels": [
+    "Missile"
+  ],
+  "location": "Parking Lot B",
+  "notes": "\"Missile\"",
+  "status": "false_positive"
+}
