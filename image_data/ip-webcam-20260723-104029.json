@@ -1,0 +1,29 @@
+{
+  "categories": [
+    "fight"
+  ],
+  "confidence": 66.885507106781,
+  "created_at": "2026-07-23T10:40:29",
+  "detections": [
+    {
+      "box": [
+        233,
+        6,
+        1150,
+        713
+      ],
+      "category": "fight",
+      "confidence": 0.6688550710678101,
+      "label": "fight"
+    }
+  ],
+  "id": 1784779829683,
+  "image_file": "ip-webcam-20260723-104029.jpg",
+  "image_path": "image_data/ip-webcam-20260723-104029.jpg",
+  "labels": [
+    "fight"
+  ],
+  "location": "East Corridor",
+  "notes": "\"fight\"",
+  "status": "pending"
+}
